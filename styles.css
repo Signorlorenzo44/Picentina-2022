@@ -1,0 +1,116 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #003366; /* Blu scuro */
+    color: #FFD700; /* Giallo */
+    padding: 1em 0;
+    position: relative;
+    text-align: center; /* Centro la scritta nel header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+header .logo img {
+    position: absolute;
+    top: 0px; /* Porta il logo un po' più in alto */
+    left: 10px;
+    width: 80px;
+    height: auto;
+}
+
+header .sponsor img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px;
+    height: auto;
+}
+
+nav {
+    background-color: #002244; /* Blu più scuro */
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: #FFD700; /* Giallo */
+    font-weight: bold;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #FFD700; /* Giallo */
+    color: #003366; /* Blu scuro */
+}
+
+main {
+    padding: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gallery img {
+    max-width: 100%;
+    margin: 10px;
+    border: 2px solid #003366; /* Blu scuro */
+}
+
+footer {
+    background-color: #003366; /* Blu scuro */
+    color: #FFD700; /* Giallo */
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer .social-icons {
+    margin-bottom: 10px;
+}
+
+footer .social-icons a {
+    color: #FFD700; /* Giallo */
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    header .logo img, header .sponsor img {
+        width: 60px;
+    }
+
+    .gallery img {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

@@ -9,77 +9,132 @@ body {
 header {
     background-color: #003366; /* Blu scuro */
     color: #FFD700; /* Giallo */
-    padding: 1em 0;
+    padding: 1em;
     position: relative;
-    text-align: center; /* Centro la scritta nel header */
-}
-
-header h1 {
-    margin: 0;
-    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header .logo img {
-    position: absolute;
-    top: 0px; /* Porta il logo un po' più in alto */
-    left: 10px;
-    width: 80px;
+    width: 100px;
     height: auto;
 }
 
 header .sponsor img {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 80px;
+    width: 100px;
     height: auto;
 }
 
-nav {
-    background-color: #002244; /* Blu più scuro */
-    overflow: hidden;
+.drawer-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #FFD700;
 }
 
-nav ul {
+.drawer {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #003366;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.drawer .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #FFD700;
+}
+
+.drawer ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+.drawer ul li {
+    padding: 8px 8px 8px 32px;
+}
+
+.drawer ul li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFD700;
+    display: block;
+    transition: 0.3s;
+}
+
+.drawer ul li a:hover {
+    color: #ffffff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px; /* Adjust as needed */
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #003366;
+    color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #002244;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.logo-center {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }
 
-nav ul li {
-    margin: 0;
-}
-
-nav ul li a {
-    display: block;
-    padding: 14px 20px;
-    text-decoration: none;
-    color: #FFD700; /* Giallo */
-    font-weight: bold;
-    text-align: center;
-}
-
-nav ul li a:hover {
-    background-color: #FFD700; /* Giallo */
-    color: #003366; /* Blu scuro */
-}
-
-main {
-    padding: 20px;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.gallery img {
-    max-width: 100%;
-    margin: 10px;
-    border: 2px solid #003366; /* Blu scuro */
+.logo-center img {
+    width: 150px;
+    height: auto;
 }
 
 footer {
@@ -90,6 +145,7 @@ footer {
 }
 
 footer .social-icons {
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -100,17 +156,38 @@ footer .social-icons a {
     font-size: 1.5em;
 }
 
+.teams-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.team-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    background-color: #003366;
+    color: #FFD
+700;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.team-button:hover {
+    background-color: #002244;
+}
+
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
     header .logo img, header .sponsor img {
-        width: 60px;
+        width: 80px;
     }
 
-    .gallery img {
-        width: 100%;
-        margin: 5px 0;
+    .logo-center img {
+        width: 100px;
+    }
+
+    form {
+        width: 90%;
     }
 }

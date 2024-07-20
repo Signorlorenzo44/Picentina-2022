@@ -9,48 +9,75 @@
 </head>
 <body>
     <header>
+        <a href="javascript:void(0)" class="drawer-icon" onclick="toggleDrawer()">
+            <i class="fa fa-bars"></i>
+        </a>
         <a href="index.html" class="logo">
             <img src="https://content-s3.tuttocampo.it/Teams/Original/1131848.png?v=1&_gl=1*11ezhav*_ga*NDc5NjE2OTg3LjE3MDQ1NTU5NjU.*_ga_K7D43T92X5*MTcyMTM4OTAzNC4xOC4xLjE3MjEzODkwNjguMjYuMC4w" alt="Logo Picentina 2022">
         </a>
-        <h1>Sotto il segno dell'aquila: la passione e l'orgoglio della nostra squadra</h1>
-        <a href="https://www.royalsport.it/" class="sponsor">
-            <img src="https://www.royalsport.it/image/catalog/logo_royal.png" alt="Royal Sport">
+        <a href="https://lh3.googleusercontent.com/p/AF1QipPL2Ajy9ycopfsrL7SaFggru33wf7UBf6Zm6icR=s1360-w1360-h1020" class="sponsor">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPL2Ajy9ycopfsrL7SaFggru33wf7UBf6Zm6icR=s1360-w1360-h1020" alt="Sponsor Logo">
         </a>
     </header>
-    <nav>
+    <nav id="drawer" class="drawer">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleDrawer()">&times;</a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">Chi Siamo</a></li>
-            <li><a href="squadra.html">Squadra</a></li>
+            <li><a href="squadra.html">Squadre</a></li>
             <li><a href="risultati.html">Risultati</a></li>
             <li><a href="classifica.html">Classifica</a></li>
             <li><a href="staff.html">Staff</a></li>
             <li><a href="sponsor.html">Sponsor</a></li>
             <li><a href="contact.html">Contattaci</a></li>
+            <li><a href="index.html">IT</a> | <a href="index-en.html">EN</a></li>
         </ul>
     </nav>
     <main>
-        <section>
-            <h2>Galleria</h2>
-            <div class="gallery">
-                <img src="img1.jpg" alt="Immagine 1">
-                <img src="img2.jpg" alt="Immagine 2">
-                <img src="img3.jpg" alt="Immagine 3">
-            </div>
-        </section>
-        <section>
-            <h2>La Nostra Sede</h2>
-            <p>La nostra sede si trova a [indirizzo della sede].</p>
-        </section>
+        <div class="carousel">
+            <img class="carousel-image" src="img1.jpg" alt="Immagine 1">
+            <img class="carousel-image" src="img2.jpg" alt="Immagine 2">
+            <img class="carousel-image" src="img3.jpg" alt="Immagine 3">
+            <img class="carousel-image" src="https://content-s3.tuttocampo.it/TeamPhotos/600/1131848.png?v=2" alt="Immagine 4">
+        </div>
+        <div class="logo-center">
+            <img src="https://content-s3.tuttocampo.it/Teams/Original/1131848.png?v=1&_gl=1*11ezhav*_ga*NDc5NjE2OTg3LjE3MDQ1NTU5NjU.*_ga_K7D43T92X5*MTcyMTM4OTAzNC4xOC4xLjE3MjEzODkwNjguMjYuMC4w" alt="Logo Picentina 2022">
+        </div>
     </main>
     <footer>
-        <p>&copy; 2024 Picentina 2022</p>
         <div class="social-icons">
             <a href="https://www.facebook.com/profile.php?id=100043995585981&locale=it_IT" class="fa fa-facebook"></a>
             <a href="https://www.instagram.com/a.s.d.picentina2022/" class="fa fa-instagram"></a>
             <a href="https://www.twitch.tv/asdpicentina22" class="fa fa-twitch"></a>
             <a href="https://www.tuttocampo.it/Campania/SecondaCategoria/GironeG/Squadra/Picentina2022/1131848/Scheda" class="fa fa-globe"></a>
         </div>
+        <p>&copy; 2024 Picentina 2022</p>
     </footer>
+    <script>
+        function toggleDrawer() {
+            var drawer = document.getElementById('drawer');
+            if (drawer.style.width === '250px') {
+                drawer.style.width = '0';
+            } else {
+                drawer.style.width = '250px';
+            }
+        }
+
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-image');
+        const totalImages = images.length;
+
+        function showNextImage() {
+            images[currentIndex].style.display = 'none';
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].style.display = 'block';
+        }
+
+        setInterval(showNextImage, 5000);
+
+        window.onload = function() {
+            images[currentIndex].style.display = 'block';
+        };
+    </script>
 </body>
 </html>

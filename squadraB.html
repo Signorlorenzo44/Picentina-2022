@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contattaci - Picentina 2022</title>
+    <title>Squadra B - Picentina 2022</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -15,47 +14,60 @@
         <a href="index.html" class="logo">
             <img src="https://content-s3.tuttocampo.it/Teams/Original/1131848.png?v=1&_gl=1*11ezhav*_ga*NDc5NjE2OTg3LjE3MDQ1NTU5NjU.*_ga_K7D43T92X5*MTcyMTM4OTAzNC4xOC4xLjE3MjEzODkwNjguMjYuMC4w" alt="Logo Picentina 2022">
         </a>
-        <a href="https://lh3.googleusercontent.com/p/AF1QipPL2Ajy9ycopfsrL7SaFggru33wf7UBf6Zm6icR=s1360-w1360-h1020" class="sponsor">
-            <img src="https://lh3.googleusercontent.com/p/AF1QipPL2Ajy9ycopfsrL7SaFggru33wf7UBf6Zm6icR=s1360-w1360-h1020" alt="Sponsor Logo">
-        </a>
     </header>
+    
     <nav id="drawer" class="drawer">
         <a href="javascript:void(0)" class="closebtn" onclick="toggleDrawer()">&times;</a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">Chi Siamo</a></li>
-            <li><a href="squadra.html">Squadre</a></li>
+            <li><a href="squadra.html">Squadra</a></li>
             <li><a href="risultati.html">Risultati</a></li>
             <li><a href="classifica.html">Classifica</a></li>
             <li><a href="staff.html">Staff</a></li>
             <li><a href="sponsor.html">Sponsor</a></li>
             <li><a href="contact.html">Contattaci</a></li>
-            <li><a href="index.html">IT</a> | <a href="index-en.html">EN</a></li>
         </ul>
     </nav>
+    
     <main>
+        <h1>ROSA 2024/2025</h1>
+        
         <section>
-            <h2>Contattaci</h2>
-            <form action="https://formspree.io/f/mblrbeda" method="POST">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Messaggio:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <button type="submit">Invia</button>
-            </form>
+            <h2>Allenatori</h2>
+             <div class="staff-container">
+<div class="staff-member">
+            <img src="img/pelé.jpg" alt="Allenatore Naddeo Antonio">
+            <p>ALLENATORE<br>NADDEO ANTONIO (PELÉ)</p>
+        </div>
+
+        </section>
+        
+        <section>
+            <h2>Portieri</h2>
+            <!-- Dettagli sui portieri -->
+        </section>
+        
+        <section>
+            <h2>Difensori</h2>
+            <!-- Dettagli sui difensori -->
+        </section>
+        
+        <section>
+            <h2>Centrocampisti</h2>
+            <!-- Dettagli sui centrocampisti -->
+        </section>
+        
+        <section>
+            <h2>Attaccanti</h2>
+            <!-- Dettagli sugli attaccanti -->
         </section>
     </main>
+
     <footer>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=100043995585981&locale=it_IT" class="fa fa-facebook"></a>
-            <a href="https://www.instagram.com/a.s.d.picentina2022/" class="fa fa-instagram"></a>
-            <a href="https://www.twitch.tv/asdpicentina22" class="fa fa-twitch"></a>
-            <a href="https://www.tuttocampo.it/Campania/SecondaCategoria/GironeG/Squadra/Picentina2022/1131848/Scheda" class="fa fa-globe"></a>
-        </div>
         <p>&copy; 2024 Picentina 2022</p>
     </footer>
+
     <script>
         function toggleDrawer() {
             var drawer = document.getElementById('drawer');

@@ -25,6 +25,19 @@ header .sponsor img {
     width: 100px;
     height: auto;
 }
+.back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: yellow; /* Colore giallo */
+    font-size: 24px; /* Dimensione della freccia */
+    text-decoration: none;
+}
+
+.back-arrow:hover {
+    color: #ffd700; /* Cambia leggermente il colore al passaggio del mouse */
+}
+
 
 .drawer-icon {
     font-size: 1.5em;
@@ -125,6 +138,13 @@ form button:hover {
     display: none;
 }
 
+.staff-member img {
+    width: 150px; /* Imposta una larghezza più corta */
+    height: 250px; /* Imposta un'altezza maggiore */
+    object-fit: cover; /* Adatta l'immagine al contenitore senza deformarla */
+}
+
+
 .logo-center {
     display: flex;
     justify-content: center;
@@ -156,27 +176,67 @@ footer .social-icons a {
     font-size: 1.5em;
 }
 
-.teams-buttons {
+.staff-container, .players-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.staff-member, .player {
+    margin: 10px;
     text-align: center;
-    margin-top: 20px;
+}
+
+.staff-member img, .player img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.staff-member p, .player p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #003366;
+    font-weight: bold;
+}
+.teams-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .team-button {
-    display: inline-block;
-    padding: 15px 30px;
-    margin: 10px;
     background-color: #003366;
-    color: #FFD
-700;
+    color: white;
+    padding: 15px 30px;
     text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
     border-radius: 5px;
-    font-size: 20px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .team-button:hover {
-    background-color: #002244;
+    background-color: #FFD700;
 }
+
+.sponsor-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonne uguali */
+    gap: 20px; /* Spazio tra le colonne e le righe */
+    justify-items: center; /* Centra le immagini in ogni colonna */
+}
+
+.sponsor-container img {
+    width: 200px; /* Imposta la larghezza delle immagini */
+    height: auto; /* Imposta l'altezza delle immagini */
+    object-fit: cover; /* Adatta l'immagine mantenendo il contenuto */
+}
+
+
+
 
 @media (max-width: 768px) {
     header .logo img, header .sponsor img {
